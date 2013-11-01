@@ -1,0 +1,51 @@
+<?php
+		$rules['company_name'] = "trim|htmlspecialchars|max_length[75]";
+		$rules['address1'] = "trim|htmlspecialchars|max_length[100]";
+		$rules['address2'] = "trim|htmlspecialchars|max_length[100]";
+		$rules['city'] = "trim|htmlspecialchars|max_length[50]";
+		$rules['province'] = "trim|htmlspecialchars|max_length[25]";
+		$rules['country'] = "trim|htmlspecialchars|max_length[25]";
+		$rules['postal_code'] = "trim|htmlspecialchars|max_length[10]";
+		$rules['website'] = "trim|htmlspecialchars|max_length[150]";
+		$rules['primary_contact'] = "trim|htmlspecialchars|required|max_length[75]";
+		$rules['primary_contact_email'] = "trim|htmlspecialchars|required|max_length[50]|valid_email";
+		$rules['logo'] = "trim|htmlspecialchars|max_length[50]";
+		$rules['invoice_note_default'] = "trim|htmlspecialchars|max_length[255]";
+		$rules['currency_type'] = "trim|htmlspecialchars|max_length[20]";
+		$rules['currency_symbol'] = "ltrim|max_length[9]";
+		$rules['days_payment_due'] = "trim|htmlspecialchars|numeric|max_length[3]";
+		$rules['tax_code'] = "trim|htmlspecialchars|max_length[50]";
+		$rules['tax1_desc'] = "trim|htmlspecialchars|max_length[50]";
+		$rules['tax1_rate'] = "trim|htmlspecialchars|max_length[6]";
+		$rules['tax2_desc'] = "trim|htmlspecialchars|max_length[50]";
+		$rules['tax2_rate'] = "trim|htmlspecialchars|max_length[6]";
+		$rules['save_invoices'] = "trim|htmlspecialchars|alpha|max_length[1]";
+		$rules['display_branding'] = "trim|htmlspecialchars|alpha|max_length[1]";
+		$this->validation->set_rules($rules);
+		
+		$fields['company_name'] = $this->lang->line('settings_company_name');
+		$fields['address1'] = $this->lang->line('clients_address1');
+		$fields['address2'] = $this->lang->line('clients_address2');
+		$fields['city'] = $this->lang->line('clients_city');
+		$fields['province'] = $this->lang->line('clients_province');
+		$fields['country'] = $this->lang->line('clients_country');
+		$fields['postal_code'] = $this->lang->line('clients_postal');
+		$fields['website'] = $this->lang->line('clients_website');
+		$fields['primary_contact'] = $this->lang->line('settings_primary_contact');
+		$fields['primary_contact_email'] = $this->lang->line('settings_primary_email');
+		$fields['logo'] = $this->lang->line('settings_logo');
+		$fields['invoice_note_default'] = $this->lang->line('settings_default_note');
+		$fields['currency_type'] = $this->lang->line('settings_currency type');
+		$fields['currency_symbol'] = $this->lang->line('settings_currency symbol');
+		$fields['days_payment_due'] = $this->lang->line('settings_payment_days');
+		$fields['tax_code'] = $this->lang->line('settings_tax_code');
+		$fields['tax1_desc'] = $this->lang->line('invoice_tax1_description');
+		$fields['tax1_rate'] = $this->lang->line('invoice_tax1_rate');
+		$fields['tax2_desc'] = $this->lang->line('invoice_tax2_description');
+		$fields['tax2_rate'] = $this->lang->line('invoice_tax2_rate');
+		$fields['save_invoices'] = $this->lang->line('settings_display_branding');
+		$fields['display_branding'] = $this->lang->line('settings_display_branding');
+		$this->validation->set_fields($fields);
+
+		$this->validation->set_error_delimiters('<span class="error">', '</span>');
+?>
